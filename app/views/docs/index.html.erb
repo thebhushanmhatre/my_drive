@@ -1,0 +1,17 @@
+<div class="container">
+  <% @docs.each do |doc| %>
+    <h2>
+      <%= link_to doc.title, doc, :class=>"text-body"  %>
+    </h2>
+    <p>
+      <%= 'Created "' + time_ago_in_words(doc.created_at) + '" ago' %>
+    </p>
+    <p>
+      <%= 'Last Updated "' + time_ago_in_words(doc.updated_at)  + '" ago' %>
+    </p>
+    <p>
+      <%= truncate(doc.content, length:100) %>
+    </p>
+  <% end %>
+  <%= link_to "Create New Doc", new_doc_path, :class=>"btn-primary" %>
+</div>

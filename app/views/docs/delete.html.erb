@@ -1,0 +1,9 @@
+<div class="container">
+  <h1>Are you sure you want to delete the following Doc ?</h1>
+  <%= form_for @doc, method: :delete do |f| %>
+    <%= f.object.title %>
+    <%= f.object.content %>
+    <%= f.submit value: "Delete Doc", class: "btn-danger" %>
+  <% end %>
+  <%= link_to "Cancel", doc_path(@doc), :class=>"btn-primary" %>
+</div>

@@ -1,0 +1,11 @@
+<div class="container">
+  <h1>
+    <%= @doc.title %>
+  </h1>
+  <p>
+    <%= @doc.content %>
+  </p>
+  <%= link_to "All Docs", docs_path, :class=>"btn-primary" %>
+  <%= link_to "Edit Doc", edit_doc_path(@doc), :class=>"btn-primary" %>
+  <%= link_to "Delete Doc", delete_doc_path(@doc), :class=>"btn-primary" %>
+</div>

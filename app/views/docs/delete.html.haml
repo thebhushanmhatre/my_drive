@@ -1,8 +1,0 @@
-%h1 Are you sure you want to delete the following Doc ?
-
-= form_for @doc, method: :delete do |f|
-  = f.object.title
-  = f.object.content
-  = f.submit
-
-= link_to "Cancel", doc_path(@doc)
