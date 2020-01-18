@@ -3,7 +3,10 @@
   <%= form_for @doc, method: :delete do |f| %>
     <%= f.object.title %>
     <%= f.object.content %>
+    <br/>
     <%= f.submit value: "Delete Doc", class: "btn-danger" %>
+    <br/>
+    <br/>
   <% end %>
   <%= link_to "Cancel", doc_path(@doc), :class=>"btn-primary" %>
 </div>
